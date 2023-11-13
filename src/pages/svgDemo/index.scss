@@ -1,0 +1,41 @@
+.svgFont{
+    svg{
+        height: 200px;
+        text{
+            font-size: 230px;
+            color: #ccc;
+            text-transform: uppercase;
+            display: block;
+            font-weight: bold;
+            letter-spacing: -8px;
+            animation: stroke 3s forwards;
+        }
+    }
+}
+@keyframes stroke {
+	0% {
+		fill: transparent;
+		stroke: #ccc;
+		stroke-dashoffset: 25%;
+		stroke-dasharray: 0 50%;
+		stroke-width: 0.8;
+	}
+	50% {
+		fill: transparent;
+		stroke: #ccc;
+		stroke-width: 1.2;
+	}
+	70% {
+		fill: transparent;
+		stroke: #ccc;
+		stroke-width: 1.5;
+	}
+	90%,
+	100% {
+		stroke: #ccc;
+		stroke-dashoffset: -25%;
+		stroke-dasharray: 50% 0;
+		stroke-width: 0;
+        fill: url(#grad2);
+	}
+}
